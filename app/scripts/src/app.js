@@ -1,0 +1,24 @@
+import socket from  './ws-client';
+
+class ChatApp {
+    constructor(){
+        socket.init('ws://localhost:3001');
+    }
+}
+
+class ChatMessage {
+    constructor({message: m, user: u='batman', timestamp: t=(new Date()).getTime()}) {
+        this.user = u;
+        this.message = m;
+        this.timestamp = t;
+    }
+    serialize () {
+        return {
+            user: this.user,
+            message: this.message,
+            timestamp: this.timestamp
+        };
+    }
+}
+
+export default ChatApp;
