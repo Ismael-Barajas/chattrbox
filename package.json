@@ -13,6 +13,9 @@
   "author": "Ismael",
   "license": "MIT",
   "devDependencies": {
+    "crypto-js": "^4.0.0",
+    "jquery": "^3.5.1",
+    "moment": "^2.29.1",
     "nodemon": "^2.0.6"
   },
   "dependencies": {
